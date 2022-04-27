@@ -14,8 +14,8 @@ const MobileMenu = ({ isOpen, toggle }) => {
         </div>
         <ul className="navbar__mobile-links">
           {["home", "about", "work", "skills", "contact"].map((item) => (
-            <li className="navbar-listItem" key={`link-${item}`}>
-              <a href={`#$item`}>{item}</a>
+            <li className="navbar-listItem" key={item} onClick={toggle}>
+              <a href={`#${item}`}>{item}</a>
             </li>
           ))}
         </ul>
@@ -37,6 +37,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   z-index: 200;
+  box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};

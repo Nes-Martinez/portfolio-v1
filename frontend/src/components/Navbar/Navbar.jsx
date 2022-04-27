@@ -13,7 +13,7 @@ const Navbar = ({ toggle }) => {
       <ul className="navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item) => (
           <li className="navbar-listItem" key={`link-${item}`}>
-            <a href={`#$item`}>{item}</a>
+            <a href={`#${item}`}>{item}</a>
             <div />
           </li>
         ))}

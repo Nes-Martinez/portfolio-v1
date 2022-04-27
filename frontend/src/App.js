@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { About, Footer, Header, Skills, Testimonials, Work } from "./screens";
+import { About, Footer, Header, Skills, Testimonials, Work } from "./sections";
 import { Navbar, MobileMenu, Backdrop } from "./components";
 
 import "./App.scss";
