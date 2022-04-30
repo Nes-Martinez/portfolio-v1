@@ -23,6 +23,10 @@
     @media screen and (min-width: 2000px) {
       width: 200px;
     }
+
+    @media screen and (max-width: 968px) {
+      width: 90px;
+    }
   }
 }
 
