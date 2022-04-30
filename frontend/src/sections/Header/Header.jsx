@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import "./Header.scss";
+import { videos } from "../../constants";
 
 const Header = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -19,16 +20,28 @@ const Header = () => {
 
   return (
     <div id="home" className="header">
-      <TransitionGroup component={null}>
-        {isMounted &&
-          collection.map((item, i) => (
-            <CSSTransition key={i} classNames="intro-text" timeout={2000}>
-              <div style={{ transitionDelay: `${i + 1}00ms` }}>
-                {item} shabuuu
-              </div>
-            </CSSTransition>
-          ))}
-      </TransitionGroup>
+      <div className="header__video-container">
+        <div className="header__background"></div>
+        <video
+          className="header__video"
+          src={videos.coding}
+          type="video/mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
+      <div className="header__content">
+        <TransitionGroup component={null}>
+          {isMounted &&
+            collection.map((item, i) => (
+              <CSSTransition key={i} classNames="intro-text" timeout={2000}>
+                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+              </CSSTransition>
+            ))}
+        </TransitionGroup>
+      </div>
     </div>
   );
 };
