@@ -13,21 +13,17 @@ const App = () => {
   };
 
   return (
-    <>
-      <div className="app">
-        <Backdrop isOpen={isOpen} toggle={toggle} />
-        <MobileMenu isOpen={isOpen} toggle={toggle} />
-        <Navbar toggle={toggle} />
-        <Header />
-      </div>
-      <div className="app__main">
-        <About />
-        <Work />
-        <Skills />
-        <Testimonials />
-        <Footer />
-      </div>
-    </>
+    <div className="app">
+      <Backdrop isOpen={isOpen} toggle={toggle} />
+      <MobileMenu isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonials />
+      <Footer />
+    </div>
   );
 };
 

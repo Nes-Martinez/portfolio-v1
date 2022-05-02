@@ -1,0 +1,17 @@
+.app__about {
+  background: red;
+}
+
+.about__info-blocks {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+.about__ .about__block {
+  transition: transform 500ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
