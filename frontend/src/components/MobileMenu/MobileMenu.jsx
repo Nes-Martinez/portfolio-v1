@@ -7,20 +7,20 @@ import { FaTimes as XIcon } from "react-icons/fa";
 
 const MobileMenu = ({ isOpen, toggle }) => {
   return (
-    <Container isOpen={isOpen} onClick={toggle}>
-      <nav className="navbar__mobile">
-        <div className="navbar__mobile-icon">
+    <div className="app__navbar-mobile">
+      <Container isOpen={isOpen} onClick={toggle}>
+        <div className="app__navbar-mobile-icon">
           <XIcon />
         </div>
-        <ul className="navbar__mobile-links">
+        <ul className="app__navbar-mobile-links">
           {["home", "about", "work", "skills", "contact"].map((item) => (
-            <li className="navbar-listItem" key={item} onClick={toggle}>
+            <li key={item} onClick={toggle}>
               <a href={`#${item}`}>{item}</a>
             </li>
           ))}
         </ul>
-      </nav>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

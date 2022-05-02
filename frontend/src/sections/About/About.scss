@@ -1,17 +1,41 @@
 .app__about {
-  background: red;
-}
-
-.about__info-blocks {
-  flex: 1;
   width: 100%;
-  flex-direction: column;
+  padding: 60px 120px;
+  background: black;
+
+  @media screen and (max-width: 968px) {
+    padding: 2px 40px;
+  }
 }
 
-.about__ .about__block {
+.app__about-info-blocks {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.app__about-block {
+  display: flex;
+  flex: 2;
+  background-color: #e4e4e4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin: 2rem;
   transition: transform 500ms ease-in-out;
 
+  img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
   }
 }

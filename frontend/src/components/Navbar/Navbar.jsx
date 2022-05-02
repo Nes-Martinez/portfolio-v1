@@ -6,18 +6,18 @@ import { FaBars as MenuBars } from "react-icons/fa";
 
 const Navbar = ({ toggle }) => {
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
+    <nav className="app__navbar">
+      <div className="app__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div>
-      <ul className="navbar-links">
+      <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item) => (
-          <li className="navbar__listItem" key={`link-${item}`}>
+          <li className="app__navbar-listItem" key={`link-${item}`}>
             <a href={`#${item}`}>{item}</a>
             <div />
           </li>
         ))}
-        <li className="navbar__button">
+        <li className="app__navbar-button">
           <button>
             <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
               Resume
@@ -26,7 +26,7 @@ const Navbar = ({ toggle }) => {
         </li>
       </ul>
 
-      <div className="navbar__mobile-toggle" onClick={toggle}>
+      <div className="app__navbar-mobile-toggle" onClick={toggle}>
         <MenuBars />
       </div>
     </nav>

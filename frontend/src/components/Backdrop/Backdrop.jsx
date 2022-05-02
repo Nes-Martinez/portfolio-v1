@@ -5,7 +5,7 @@ import "./Backdrop.scss";
 const Backdrop = ({ isOpen, toggle }) => {
   return (
     isOpen && (
-      <div className="backDrop" onClick={toggle}>
+      <div className="app__backdrop" onClick={toggle}>
         <div>&nbsp;</div>
       </div>
     )

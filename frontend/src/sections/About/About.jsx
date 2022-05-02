@@ -28,19 +28,18 @@ const items = [
 
 const About = () => {
   return (
-    <>
-      <h2 className="app__about-header">About Me</h2>
-
+    <div className="app__about">
+      <h2 className="section-header-text">About Me</h2>
       <div className="app__about-info-blocks">
         {items.map((item, index) => (
           <div className="app__about-block" key={item.title + index}>
             <img src={item.imgUrl} alt={item.title}></img>
-            <h2 className="app__about-text">{item.title}</h2>
-            <p className="app__about-description">{item.description}</p>
+            <h2 className="title-text">{item.title}</h2>
+            <p className="description-text">{item.description}</p>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

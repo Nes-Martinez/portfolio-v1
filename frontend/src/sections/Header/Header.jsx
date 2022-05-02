@@ -12,18 +12,20 @@ const Header = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <div className="header-small-text">Hello!</div>;
-  const two = <div className="header-large-text">I'm Nes.</div>;
-  const three = <div className="header-medium-text">Let's work together.</div>;
+  const one = <div className="app__header-small-text">Hello!</div>;
+  const two = <div className="app__header-large-text">I'm Nes.</div>;
+  const three = (
+    <div className="app__header-medium-text">Let's work together.</div>
+  );
 
   const collection = [one, two, three];
 
   return (
-    <div id="home" className="header">
-      <div className="header__video-container">
-        <div className="header__background"></div>
+    <div id="home" className="app__header">
+      <div className="app__header-video-container">
+        <div className="app__header-background"></div>
         <video
-          className="header__video"
+          className="app__header-video"
           src={videos.coding}
           type="video/mp4"
           autoPlay
@@ -32,7 +34,7 @@ const Header = () => {
           playsInline
         />
       </div>
-      <div className="header__content">
+      <div className="app__header-content">
         <TransitionGroup component={null}>
           {isMounted &&
             collection.map((item, i) => (
