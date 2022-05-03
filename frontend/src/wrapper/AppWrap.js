@@ -3,8 +3,6 @@ import { NavigationSelector, SocialMedia } from "../components";
 
 const AppWrap = (Component, idName, classNames) =>
   function HOC() {
-    console.log("classNames", classNames);
-
     return (
       <div id={idName} className={`app__container ${classNames}`}>
         <SocialMedia />

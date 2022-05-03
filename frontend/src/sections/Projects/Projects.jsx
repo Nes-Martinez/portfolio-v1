@@ -47,15 +47,17 @@ const Projects = () => {
   };
 
   return (
-    <div className="app__projects">
+    <div className="app__projects app__flex">
       <h2 className="section-header-text">Things I've Built</h2>
 
       <div className="app__projects-filters">
-        {["React", "E-Commerce", "All"].map((item, index) => (
+        {["React", "E-Commerce", "Database", "All"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
-            className={`${activeFilter === item ? "item-active" : ""}`}
+            className={`app__projects-filter p-text ${
+              activeFilter === item ? "filter-active" : ""
+            }`}
           >
             {item}
           </div>
@@ -100,15 +102,17 @@ const Projects = () => {
                         )}
                       </div>
                     </LinksContainer>
-                    <img src={urlFor(project.imgUrl)} alt={project.title} />{" "}
+                    <img src={urlFor(project.imgUrl)} alt={project.title} />
                   </ImageContainer>
-                  <h2 className="title-text">{project.title}</h2>
-                  <p className="description-text">{project.description}</p>
-                  {project.techStack && (
-                    <p className="description-text">
-                      {project.techStack.join(" ")}
-                    </p>
-                  )}
+                  <div className="app__projects-block-content app__flex">
+                    <h4>{project.title}</h4>
+                    <p className="description-text">{project.description}</p>
+                    {project.techStack && (
+                      <p className="description-text">
+                        {project.techStack.join(" ")}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </CSSTransition>
             ))}

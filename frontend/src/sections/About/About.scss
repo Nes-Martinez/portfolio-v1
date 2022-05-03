@@ -1,12 +1,13 @@
 .app__about {
   width: 100%;
   background: black;
+  flex-direction: column;
 }
 
 .app__about-info-blocks {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: top;
   flex-wrap: wrap;
   margin-top: 2rem;
 }

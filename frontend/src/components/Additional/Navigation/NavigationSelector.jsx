@@ -6,7 +6,7 @@ import React from "react";
 const NavigationSelector = ({ active }) => {
   return (
     <div className="app__navigation">
-      {["home", "about", "work", "skills", "contact"].map((item, index) => (
+      {["home", "about", "projects", "skills", "contact"].map((item, index) => (
         <a
           href={`#${item}`}
           key={item + index}

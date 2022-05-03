@@ -21,7 +21,7 @@ const Header = () => {
   const collection = [one, two, three];
 
   return (
-    <div id="home" className="app__header">
+    <div id="home" className="app__header app__flex">
       <div className="app__header-video-container">
         <div className="app__header-background"></div>
         <video

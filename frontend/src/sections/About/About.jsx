@@ -22,7 +22,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="app__about">
+    <div className="app__about app__flex">
       <h2 className="section-header-text">About Me</h2>
       <div className="app__about-info-blocks">
         {items.map((item, index) => (
