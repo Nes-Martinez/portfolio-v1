@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { motion } from "framer-motion";
 
 import styled from "styled-components";
 import { AppWrap } from "../../wrapper";
@@ -9,10 +9,10 @@ import "./Projects.scss";
 import { BiSearchAlt2 } from "react-icons/bi";
 
 const Projects = () => {
-  const [isMounted, setIsMounted] = useState(false);
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [activeFilter, setActiveFilter] = useState("");
+  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
     const query = '*[_type == "projects"]';
@@ -27,15 +27,15 @@ const Projects = () => {
       }
     }
     fetchProjects();
-    const timeout = setTimeout(() => setIsMounted(true), 1000);
-    return () => clearTimeout(timeout);
   }, []);
 
   const handleWorkFilter = (item) => {
-    setFilteredProjects([]);
     setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+
       if (item === "All") {
         setFilteredProjects(projects);
       } else {
@@ -43,7 +43,7 @@ const Projects = () => {
           projects.filter((project) => project.tags.includes(item))
         );
       }
-    }, 500);
+    }, 200);
   };
 
   return (
@@ -64,60 +64,44 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="app__projects-info-blocks">
-        <TransitionGroup component={null}>
-          {isMounted &&
-            filteredProjects.map((project, index) => (
-              <CSSTransition
-                key={index}
-                classNames="active-project"
-                timeout={1000}
-              >
-                <div
-                  className="app__projects-block"
-                  style={{ transitionDelay: `${index + 1}00ms` }}
-                >
-                  <ImageContainer>
-                    <LinksContainer>
-                      <div className="app__projects-icon-block">
-                        {project.githubLink && (
-                          <a
-                            href={project.githubLink}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <BiSearchAlt2 />
-                          </a>
-                        )}
-                      </div>
-                      <div className="app__projects-icon-block">
-                        {project.siteLink && (
-                          <a
-                            href={project.siteLink}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <BiSearchAlt2 />
-                          </a>
-                        )}
-                      </div>
-                    </LinksContainer>
-                    <img src={urlFor(project.imgUrl)} alt={project.title} />
-                  </ImageContainer>
-                  <div className="app__projects-block-content app__flex">
-                    <h4>{project.title}</h4>
-                    <p className="description-text">{project.description}</p>
-                    {project.techStack && (
-                      <p className="description-text">
-                        {project.techStack.join(" ")}
-                      </p>
-                    )}
-                  </div>
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        animate={animateCard}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className="app__projects-info-blocks"
+      >
+        {filteredProjects.map((project, index) => (
+          <div className="app__projects-block app__flex" key={index}>
+            <ImageContainer>
+              <LinksContainer>
+                <div className="app__projects-icon-block">
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <BiSearchAlt2 />
+                    </a>
+                  )}
                 </div>
-              </CSSTransition>
-            ))}
-        </TransitionGroup>
-      </div>
+              </LinksContainer>
+
+              <img src={urlFor(project.imgUrl)} alt={project.name} />
+            </ImageContainer>
+
+            <div className="app__projects-block-content app__flex">
+              <h4>{project.title}</h4>
+              <p className="description-text">{project.description}</p>
+              {project.techStack && (
+                <p className="description-text">
+                  {project.techStack.join(" ")}
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 };
