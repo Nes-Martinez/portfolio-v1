@@ -43,6 +43,13 @@
   color: #e4e4e4;
 }
 
+.job-text {
+  font-size: clamp(1rem, 0.7vw, 1.5rem);
+  text-align: left;
+  letter-spacing: 1px;
+  color: #e4e4e4;
+}
+
 .small-text {
   font-size: 0.8rem;
   text-align: left;

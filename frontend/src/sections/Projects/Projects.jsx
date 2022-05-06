@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import styled from "styled-components";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, AnimationWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Projects.scss";
 
@@ -106,7 +106,7 @@ const Projects = () => {
   );
 };
 
-export default AppWrap(Projects, "projects");
+export default AppWrap(AnimationWrap(Projects, "app__projects"), "projects");
 
 const LinksContainer = styled.div`
   opacity: 0;

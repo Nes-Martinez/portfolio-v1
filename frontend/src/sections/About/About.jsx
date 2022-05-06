@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { AppWrap } from "../../wrapper";
+import { AppWrap, AnimationWrap } from "../../wrapper";
 import "./About.scss";
 import { urlFor, client } from "../../client";
 
@@ -37,4 +37,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(About, "about");
+export default AppWrap(AnimationWrap(About, "app__about"), "about");

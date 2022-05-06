@@ -7,6 +7,8 @@ import testimonials from "./testimonials";
 import items from "./items";
 import projects from "./projects";
 import skills from "./skills";
+import years from "./years";
+import jobs from "./jobs";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -14,5 +16,12 @@ export default createSchema({
   name: "default",
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([testimonials, items, projects, skills]),
+  types: schemaTypes.concat([
+    testimonials,
+    items,
+    projects,
+    skills,
+    years,
+    jobs,
+  ]),
 });
