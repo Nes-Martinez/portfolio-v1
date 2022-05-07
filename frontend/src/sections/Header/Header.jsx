@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { AppWrap } from "../../wrapper";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import "./Header.scss";
@@ -12,17 +13,30 @@ const Header = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <div className="app__header-small-text">Hello!</div>;
-  const two = <div className="app__header-large-text">I'm Nes.</div>;
+  const one = <div className="app__header-medium-text">Hello!</div>;
+  const two = <div className="app__header-large-text">I'm Nestor.</div>;
   const three = (
-    <div className="app__header-medium-text">Let's work together.</div>
+    <div className="app__header-small-text">
+      I'm a lifelong learner with a passion for building beautiful things on the
+      web, and writing beautiful code for those things. Let's work together.
+    </div>
+  );
+
+  const four = (
+    <div className="aoo__header-hero-button">
+      <button>
+        <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
+          Resume
+        </a>
+      </button>
+    </div>
   );
 
   const collection = [one, two, three];
 
   return (
-    <div id="home" className="app__header app__flex">
-      <div className="app__header-video-container">
+    <div className="app__header app__flex">
+      {/* <div className="app__header-video-container">
         <div className="app__header-background"></div>
         <video
           className="app__header-video"
@@ -33,8 +47,8 @@ const Header = () => {
           muted
           playsInline
         />
-      </div>
-      <div className="app__header-content">
+      </div> */}
+      <div class="app__header-content">
         <TransitionGroup component={null}>
           {isMounted &&
             collection.map((item, i) => (
@@ -48,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, "home");

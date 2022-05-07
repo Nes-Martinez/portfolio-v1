@@ -10,6 +10,9 @@ const Navbar = ({ toggle }) => {
       <div className="app__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div>
+      <div className="app__navbar-mobile-toggle" onClick={toggle}>
+        <MenuBars />
+      </div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item) => (
           <li className="app__navbar-listItem" key={`link-${item}`}>
@@ -26,9 +29,9 @@ const Navbar = ({ toggle }) => {
         </li>
       </ul>
 
-      <div className="app__navbar-mobile-toggle" onClick={toggle}>
+      {/* <div className="app__navbar-mobile-toggle" onClick={toggle}>
         <MenuBars />
-      </div>
+      </div> */}
     </nav>
   );
 };
