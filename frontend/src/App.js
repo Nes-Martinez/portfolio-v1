@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  About,
-  Footer,
-  Header,
-  Skills,
-  Testimonials,
-  Projects,
-} from "./sections";
+import { About, Footer, Header, Skills, Projects } from "./sections";
 import { Navbar, MobileMenu, Backdrop } from "./components";
 
 import "./App.scss";
@@ -28,7 +21,6 @@ const App = () => {
       <About />
       <Projects />
       <Skills />
-      <Testimonials />
       <Footer />
     </div>
   );
