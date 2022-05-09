@@ -2,6 +2,7 @@ import React from "react";
 
 import { images } from "../../constants";
 import "./Navbar.scss";
+
 import { FaBars as MenuBars } from "react-icons/fa";
 
 const Navbar = ({ toggle }) => {
@@ -28,10 +29,6 @@ const Navbar = ({ toggle }) => {
           </button>
         </li>
       </ul>
-
-      {/* <div className="app__navbar-mobile-toggle" onClick={toggle}>
-        <MenuBars />
-      </div> */}
     </nav>
   );
 };

@@ -1,6 +1,30 @@
 .app__navbar-mobile {
 }
 
+.app__navbar-mobile-logo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  margin: 1px 1px;
+
+  img {
+    width: 130px;
+
+    @media screen and (min-width: 2000px) {
+      width: 200px;
+    }
+
+    @media screen and (max-width: 968px) {
+      width: 160px;
+    }
+  }
+
+  @media screen and (max-width: 968px) {
+    width: 100%;
+  }
+}
+
 .app__navbar-mobile-icon {
   position: absolute;
   top: 1.2rem;
