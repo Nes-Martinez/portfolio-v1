@@ -47,7 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="app__projects app__flex">
+    <>
       <h2 className="section-header-text">Things I've Built</h2>
 
       <div className="app__projects-filters">
@@ -102,7 +102,7 @@ const Projects = () => {
           </div>
         ))}
       </motion.div>
-    </div>
+    </>
   );
 };
 

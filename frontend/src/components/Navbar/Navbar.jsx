@@ -14,7 +14,7 @@ const Navbar = ({ toggle }) => {
         <MenuBars />
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "work", "skills", "contact"].map((item) => (
+        {["home", "about", "projects", "skills", "contact"].map((item) => (
           <li className="app__navbar-listItem" key={`link-${item}`}>
             <a href={`#${item}`}>{item}</a>
             <div />
