@@ -6,7 +6,9 @@ import { AppWrap, AnimationWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Projects.scss";
 
-import { BiSearchAlt2 } from "react-icons/bi";
+import { CgWebsite } from "react-icons/cg";
+import { BiSearchAlt2, BiLinkExternal } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -71,8 +73,8 @@ const Projects = () => {
         className="app__projects-info-blocks"
       >
         {filteredProjects.map((project, index) => (
-          <div className="app__projects-block app__flex" key={index}>
-            <ImageContainer>
+          <div className="app__projects-block" key={index}>
+            {/* <ImageContainer>
               <LinksContainer>
                 <div className="app__projects-icon-block">
                   {project.githubLink && (
@@ -88,14 +90,29 @@ const Projects = () => {
               </LinksContainer>
 
               <img src={urlFor(project.imgUrl)} alt={project.name} />
-            </ImageContainer>
+            </ImageContainer> */}
 
-            <div className="app__projects-block-content app__flex">
-              <h4>{project.title}</h4>
+            <div className="app__projects-block-content">
+              {/* <h4>{project.title}</h4> */}
+              <div class="app__projects-icon-block">
+                <a href={project.siteLink} target="_blank" rel="noreferrer">
+                  <BiLinkExternal />
+                </a>
+                <a
+                  className="app__projects-link"
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsGithub />
+                </a>
+              </div>
+              <p className="title-text">{project.title}</p>
               <p className="description-text">{project.description}</p>
               {project.techStack && (
-                <p className="description-text">
-                  {project.techStack.join(" ")}
+                <p className="tech-text">
+                  Built with: <br />
+                  {project.techStack.join(", ")}
                 </p>
               )}
             </div>

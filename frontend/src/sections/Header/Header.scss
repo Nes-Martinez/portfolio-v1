@@ -11,8 +11,9 @@
 }
 
 .app__header-large-text {
-  margin: 0 0 40px 0px;
-  color: #427bd2;
+  margin: 0 0 3px 0px;
+  color: #366c90;
+  font-family: var(--secondary-font);
   font-size: clamp(40px, 10vw, 80px);
   font-weight: 500;
 
@@ -22,7 +23,7 @@
 }
 
 .app__header-medium-text {
-  margin: 0 0 3px 0px;
+  margin: 0 0 -4px 0px;
   color: white;
   font-size: clamp(10px, 5vw, 30px);
   font-weight: 500;
@@ -30,16 +31,17 @@
 
 .app__header-small-text {
   max-width: 600px;
-  margin: 0 0 20px 0px;
+  margin: 0 0 60px 0px;
   color: #e4e4e4;
   font-size: clamp(1rem, 1.5vw, 2rem);
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .app__header-hero-button {
   button {
-    background-color: var(--tertiary-color);
-    opacity: 90%;
+    background-color: var(--secondary-color);
+    opacity: 100%;
     border: 1px solid white;
     border-radius: 3px;
     padding: 1rem 1rem;
@@ -55,7 +57,7 @@
     }
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--tertiary-color);
     }
   }
 }

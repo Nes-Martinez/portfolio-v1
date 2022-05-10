@@ -11,7 +11,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
     <div className="app__navbar-mobile">
       <Container isOpen={isOpen} onClick={toggle}>
         <div className="app__navbar-mobile-logo">
-          <img src={images.logo} alt="logo" />
+          <img src={images.logo2} alt="logo" />
         </div>
         <div className="app__navbar-mobile-icon">
           <XIcon />

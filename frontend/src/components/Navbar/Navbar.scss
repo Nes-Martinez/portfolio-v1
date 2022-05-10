@@ -18,15 +18,15 @@
   margin: 1px 1px;
 
   img {
-    padding-top: 1rem;
-    width: 130px;
+    padding-top: 0.5rem;
+    width: 80px;
 
     @media screen and (min-width: 2000px) {
       width: 200px;
     }
 
     @media screen and (max-width: 968px) {
-      width: 140px;
+      width: 80px;
     }
   }
 
@@ -67,7 +67,7 @@
     }
 
     button {
-      background-color: var(--tertiary-color);
+      background-color: var(--secondary-color);
       opacity: 90%;
       border: 1px solid white;
       border-radius: 3px;
@@ -78,11 +78,15 @@
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--tertiary-color);
       }
 
       a {
         color: var(--white-color);
+
+        &:hover {
+          color: var(--white-color);
+        }
       }
     }
   }

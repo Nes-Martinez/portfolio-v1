@@ -36,11 +36,42 @@
   color: #e4e4e4;
 }
 
-.p-text {
+.title-text {
+  font-size: clamp(1.3rem, 0.7vw, 2rem);
+  text-align: left;
+  letter-spacing: 1px;
+  color: #e4e4e4;
+  font-family: var(--secondary-font);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.description-text {
   font-size: clamp(1rem, 0.7vw, 1.5rem);
+  text-align: left;
+  letter-spacing: 1px;
+  color: #e4e4e4;
+}
+
+.tech-text {
+  font-size: clamp(0.8rem, 0.7vw, 1.1rem);
+  text-align: left;
+  letter-spacing: 1px;
+  color: #e4e4e4;
+  font-family: var(--secondary-font);
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  font-weight: 100;
+}
+
+.skill-text {
+  font-size: clamp(1.1rem, 0.7vw, 1.5rem);
   text-align: center;
   letter-spacing: 1px;
   color: #e4e4e4;
+  font-family: var(--secondary-font);
+  padding-top: 1rem;
+  font-weight: 400;
 }
 
 .job-text {

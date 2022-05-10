@@ -9,7 +9,7 @@ const Navbar = ({ toggle }) => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
+        <img src={images.icon} alt="logo" />
       </div>
       <div className="app__navbar-mobile-toggle" onClick={toggle}>
         <MenuBars />

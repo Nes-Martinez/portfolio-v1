@@ -28,8 +28,10 @@ const About = () => {
         {items.map((item, index) => (
           <div className="app__about-block" key={item.title + index}>
             <img src={urlFor(item.imgUrl)} alt={item.title}></img>
-            <h2 className="title-text">{item.title}</h2>
-            <p className="description-text">{item.description}</p>
+            <div className="app__about-block-content">
+              <h2 className="title-text">{item.title}</h2>
+              <p className="description-text">{item.description}</p>
+            </div>
           </div>
         ))}
       </div>

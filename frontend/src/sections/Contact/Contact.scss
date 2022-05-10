@@ -35,12 +35,16 @@
       height: 120px;
     }
   }
+
+  @media screen and (max-width: 968px) {
+    width: 70%;
+  }
 }
 
 .app__contact-form-button {
   color: white;
-  background-color: transparent;
-  border: 1px solid blue;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--white-color);
   border-radius: 5px;
   line-height: 1;
   text-decoration: none;
@@ -51,6 +55,6 @@
   font-weight: 700;
 
   &:hover {
-    background-color: darkblue;
+    background-color: var(--tertiary-color);
   }
 }

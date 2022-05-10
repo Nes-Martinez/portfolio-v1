@@ -48,7 +48,7 @@ const Skills = () => {
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className="p-text">{skill.name}</p>
+              <p className="skill-text">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -80,7 +80,9 @@ const Skills = () => {
         </div>
       </div>
 
-      <h5>Find my full work history in my resume.</h5>
+      <h5>
+        Find my full work history in my <a className="fancy-link">resume.</a>
+      </h5>
     </div>
   );
 };
