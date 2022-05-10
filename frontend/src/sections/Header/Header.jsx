@@ -3,7 +3,6 @@ import { AppWrap } from "../../wrapper";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import "./Header.scss";
-import { videos } from "../../constants";
 
 const Header = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -13,41 +12,27 @@ const Header = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <div className="app__header-medium-text">Hello!</div>;
-  const two = <div className="app__header-large-text">I'm Nestor.</div>;
+  const one = <p className="app__header-medium-text">Hello!</p>;
+  const two = <p className="app__header-large-text">I'm Nestor.</p>;
   const three = (
-    <div className="app__header-small-text">
+    <p className="app__header-small-text">
       I'm a lifelong learner with a passion for building beautiful things on the
       web, and writing beautiful code for those things. Let's work together.
-    </div>
+    </p>
   );
 
   const four = (
-    <div className="aoo__header-hero-button">
+    <div className="app__header-hero-button">
       <button>
-        <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
-          Resume
-        </a>
+        <a href="/#projects">View Projects</a>
       </button>
     </div>
   );
 
-  const collection = [one, two, three];
+  const collection = [one, two, three, four];
 
   return (
-    <div className="app__header app__flex">
-      {/* <div className="app__header-video-container">
-        <div className="app__header-background"></div>
-        <video
-          className="app__header-video"
-          src={videos.coding}
-          type="video/mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-      </div> */}
+    <>
       <div class="app__header-content">
         <TransitionGroup component={null}>
           {isMounted &&
@@ -58,7 +43,7 @@ const Header = () => {
             ))}
         </TransitionGroup>
       </div>
-    </div>
+    </>
   );
 };
 

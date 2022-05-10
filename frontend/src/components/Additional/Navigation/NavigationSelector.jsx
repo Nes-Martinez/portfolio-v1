@@ -11,7 +11,7 @@ const NavigationSelector = ({ active }) => {
           href={`#${item}`}
           key={item + index}
           className="app__navigation-active"
-          style={active === item ? { backgroundColor: "#313BAC" } : {}}
+          style={active === item ? { backgroundColor: "#427bd2" } : {}}
         />
       ))}
     </div>

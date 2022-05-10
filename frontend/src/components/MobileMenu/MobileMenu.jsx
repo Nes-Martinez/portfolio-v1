@@ -36,7 +36,7 @@ const Container = styled.div`
   justify-content: center;
   width: 70%;
   height: 100vh;
-  background: #fff;
+  background: var(--white-color);
   position: fixed;
   top: 0;
   left: 0;

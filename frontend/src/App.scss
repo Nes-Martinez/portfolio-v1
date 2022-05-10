@@ -21,11 +21,11 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
-  padding: 4rem 4rem;
-  background-color: black;
+  padding: 4rem 2rem;
+  background-color: var(--primary-color);
 
   @media screen and (max-width: 968px) {
-    padding: 4rem 1rem 2rem;
+    padding: 2rem 2rem 2rem;
   }
 }
 
@@ -66,9 +66,8 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background-color: black;
-
-  padding: 1rem 1rem 10rem 1rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
 
   div {
     width: 40px;
@@ -85,14 +84,14 @@
     transition: all 0.3s ease-in-out;
 
     svg {
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
       color: var(--gray-color);
     }
 
     &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
+      background-color: var(--tertiary-color);
+      border-color: var(--tertiary-color);
 
       svg {
         color: var(--white-color);
@@ -118,19 +117,19 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: var(--primary-color);
   padding: 1rem;
 
   .app__navigation-active {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: var(--white-color);
     margin: 0.5rem;
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--tertiary-color);
     }
 
     @media screen and (min-width: 2000px) {
@@ -148,5 +147,38 @@
 
   .copyright {
     padding: 2rem;
+  }
+}
+
+.fancy-link {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  color: var(--tertiary-color);
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--tertiary-color);
+    outline: 0;
+    &:after {
+      width: 100%;
+    }
+    & > * {
+      color: var(--tertiary-color) !important;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: var(--tertiary-color);
+    transition: all 0.3s ease-in-out;
+    opacity: 0.5;
   }
 }

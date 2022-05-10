@@ -1,4 +1,5 @@
 .app__navbar-mobile {
+  background-color: var(--gray-color);
 }
 
 .app__navbar-mobile-logo {
@@ -26,13 +27,19 @@
 }
 
 .app__navbar-mobile-icon {
+  color: var(--tertiary-color);
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
+  top: 2rem;
+  right: 2rem;
   background: transparent;
-  font-size: 2rem;
+  font-size: 2.5rem;
   cursor: pointer;
   outline: none;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .app__navbar-mobile-links {
@@ -51,7 +58,6 @@
     list-style: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
-    color: purple;
     cursor: pointer;
     transition: color 300ms;
     padding: 10px 10px;
@@ -70,7 +76,7 @@
     }
 
     &:hover {
-      color: #cd7f32;
+      color: (--tertiary-color);
       transition: 0.3s ease-out;
     }
   }
