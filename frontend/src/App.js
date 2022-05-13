@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { About, Footer, Header, Skills, Projects, Contact } from "./sections";
 import { Navbar, MobileMenu, Backdrop } from "./components";
+import Head from "./components/Head";
 
 import "./App.scss";
 
@@ -14,6 +15,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Head />
       <Backdrop isOpen={isOpen} toggle={toggle} />
       <MobileMenu isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
