@@ -21,7 +21,7 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
-  padding: 4rem 2rem;
+  padding: 7rem 2rem;
   background-color: var(--primary-color);
 
   @media screen and (max-width: 968px) {
@@ -34,6 +34,10 @@
   text-align: center;
   letter-spacing: 2px;
   color: #e4e4e4;
+}
+
+.section-header-description {
+  padding: 1rem 1rem;
 }
 
 .title-text {
@@ -94,11 +98,11 @@
 
 .app__social {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: var(--primary-color);
-  padding: 1rem;
+  padding-top: 20vh;
 
   div {
     width: 40px;
@@ -145,11 +149,11 @@
 
 .app__navigation {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background-color: var(--primary-color);
-  padding: 1rem;
+  padding-top: 40vh;
 
   .app__navigation-active {
     width: 10px;

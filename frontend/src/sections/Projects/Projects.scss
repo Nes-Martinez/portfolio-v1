@@ -45,17 +45,23 @@
 }
 
 .app__projects-info-blocks {
-  display: flex;
-  justify-content: space-between;
-  align-items: top;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  justify-items: center;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 868px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .app__projects-block {
   display: flex;
-  flex: 2;
-  max-width: 25vw;
+  max-width: 22vw;
   padding: 1rem;
   background-color: var(--secondary-color);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -63,7 +69,6 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  margin: 0.3rem;
   transition: transform 500ms ease-in-out;
 
   img {

@@ -24,6 +24,13 @@ const About = () => {
   return (
     <>
       <h2 className="section-header-text">About Me</h2>
+      <div class="section-header-description">
+        <p className="description-text">
+          I am a full-stack web developer with a wide range of experience in
+          different technologies.
+        </p>
+      </div>
+
       <div className="app__about-info-blocks">
         {items.map((item, index) => (
           <div className="app__about-block" key={item.title + index}>
