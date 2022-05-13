@@ -8,6 +8,8 @@
   padding: 0rem 1rem;
   position: fixed;
   z-index: 200;
+  opacity: 98%;
+  backdrop-filter: blur(6px);
   box-shadow: 0 2px 2px -2px var(--secondary-color);
 }
 
@@ -19,14 +21,14 @@
 
   img {
     padding-top: 0.5rem;
-    width: 80px;
+    width: 70px;
 
     @media screen and (min-width: 2000px) {
       width: 200px;
     }
 
     @media screen and (max-width: 968px) {
-      width: 80px;
+      width: 50px;
     }
   }
 
@@ -100,7 +102,7 @@
   font-size: clamp(2.1rem, 5vw, 3.7rem);
   display: none;
   margin: 15px 10px;
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   z-index: 50;
 
   @media screen and (max-width: 960px) {
