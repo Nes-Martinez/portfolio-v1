@@ -33,10 +33,16 @@
   transition: transform 500ms ease-in-out;
 
   img {
-    width: 100%;
+    width: 220px;
+    height: 220px;
     border-radius: 10px;
     object-fit: cover;
     border: 1px solid;
+
+    @media screen and (max-width: 868px) {
+      width: 260px;
+      height: 260px;
+    }
   }
 
   &:hover {
