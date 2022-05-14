@@ -9,11 +9,11 @@ import { FaTimes as XIcon } from "react-icons/fa";
 const MobileMenu = ({ isOpen, toggle }) => {
   return (
     <div className="app__navbar-mobile">
-      <Container isOpen={isOpen} onClick={toggle}>
+      <Container isOpen={isOpen}>
         <div className="app__navbar-mobile-logo">
           <img src={images.logo2} alt="logo" />
         </div>
-        <div className="app__navbar-mobile-icon">
+        <div className="app__navbar-mobile-icon" onClick={toggle}>
           <XIcon />
         </div>
         <ul className="app__navbar-mobile-links">
@@ -22,6 +22,11 @@ const MobileMenu = ({ isOpen, toggle }) => {
               <a href={`#${item}`}>{item}</a>
             </li>
           ))}
+          <li>
+            <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
+              <button>Resume</button>
+            </a>
+          </li>
         </ul>
       </Container>
     </div>
@@ -36,7 +41,7 @@ const Container = styled.div`
   justify-content: center;
   width: 70%;
   height: 100vh;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
   background: var(--white-color);
   position: fixed;
   top: 0;

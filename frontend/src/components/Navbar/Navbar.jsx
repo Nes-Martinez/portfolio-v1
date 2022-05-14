@@ -22,11 +22,9 @@ const Navbar = ({ toggle }) => {
           </li>
         ))}
         <li className="app__navbar-button">
-          <button>
-            <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
-              Resume
-            </a>
-          </button>
+          <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
+            <button>resume</button>
+          </a>
         </li>
       </ul>
     </nav>
