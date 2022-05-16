@@ -17,7 +17,7 @@ const Projects = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "projects"]';
+    const query = '*[_type == "projects"] | order(title)';
 
     async function fetchProjects() {
       try {
@@ -53,17 +53,19 @@ const Projects = () => {
       <h2 className="section-header-text">Things I've Built</h2>
 
       <div className="app__projects-filters">
-        {["React", "E-Commerce", "Database", "All"].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__projects-filter p-text ${
-              activeFilter === item ? "filter-active" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
+        {["All", "React", "E-Commerce", "Database", "Other"].map(
+          (item, index) => (
+            <div
+              key={index}
+              onClick={() => handleWorkFilter(item)}
+              className={`app__projects-filter p-text ${
+                activeFilter === item ? "filter-active" : ""
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
 
       <motion.div

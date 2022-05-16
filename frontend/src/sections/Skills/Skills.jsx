@@ -12,7 +12,7 @@ const Skills = () => {
 
   useEffect(() => {
     const skillsQuery = '*[_type == "skills"]';
-    const yearsQuery = '*[_type == "years"]';
+    const yearsQuery = '*[_type == "years"] | order(year desc)';
 
     async function fetchSkills() {
       try {
@@ -69,9 +69,9 @@ const Skills = () => {
                     data-for={job.name}
                     key={job.name}
                   >
-                    <h4 className="bold-text">{job.name}</h4>
-                    <p className="job-text">{job.company}</p>
-                    <p className="job-text">{job.desc}</p>
+                    <h4 className="job-title-text">{job.name}</h4>
+                    <p className="loc-text">{job.company}</p>
+                    <p className="job-desc-text">{job.desc}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -81,7 +81,16 @@ const Skills = () => {
       </div>
 
       <h5>
-        Find my full work history in my <a className="fancy-link">resume.</a>
+        Find my full work history in my{" "}
+        <a
+          href="/NM-resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fancy-link"
+        >
+          resume
+        </a>
+        .
       </h5>
     </div>
   );

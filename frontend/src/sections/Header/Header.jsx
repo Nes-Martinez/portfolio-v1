@@ -23,9 +23,9 @@ const Header = () => {
 
   const four = (
     <div className="app__header-hero-button">
-      <button>
-        <a href="/#projects">View Projects</a>
-      </button>
+      <a href="/#projects">
+        <button>View Projects</button>
+      </a>
     </div>
   );
 

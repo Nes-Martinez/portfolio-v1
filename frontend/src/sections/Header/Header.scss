@@ -40,7 +40,10 @@
 
 .app__header-hero-button {
   button {
+    font-family: var(--font-base);
     background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-weight: 500;
     opacity: 100%;
     border: 1px solid white;
     border-radius: 3px;

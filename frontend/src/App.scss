@@ -78,8 +78,23 @@
   font-weight: 400;
 }
 
-.job-text {
-  font-size: clamp(1rem, 0.7vw, 1.5rem);
+.job-title-text {
+  font-size: clamp(1rem, 0.5vw, 1.4rem);
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 1px;
+  color: #e4e4e4;
+}
+
+.job-desc-text {
+  font-size: clamp(0.8rem, 0.5vw, 1.1rem);
+  text-align: left;
+  letter-spacing: 1px;
+  color: #e4e4e4;
+}
+
+.loc-text {
+  font-size: clamp(0.9rem, 0.5vw, 1.3rem);
   text-align: left;
   letter-spacing: 1px;
   color: #e4e4e4;
@@ -192,6 +207,7 @@
   text-decoration: none;
   text-decoration-skip-ink: auto;
   position: relative;
+  font-weight: 600;
   transition: all 0.3s ease-in-out;
   color: var(--tertiary-color);
   &:hover,
@@ -213,9 +229,8 @@
     width: 0;
     height: 1px;
     position: relative;
-    bottom: 0.37em;
+    bottom: 0.09em;
     background-color: var(--tertiary-color);
     transition: all 0.3s ease-in-out;
-    opacity: 0.5;
   }
 }
