@@ -51,7 +51,6 @@ const Projects = () => {
   return (
     <>
       <h2 className="section-header-text">Things I've Built</h2>
-
       <div className="app__projects-filters">
         {["All", "React", "E-Commerce", "Database", "Other"].map(
           (item, index) => (
@@ -67,16 +66,16 @@ const Projects = () => {
           )
         )}
       </div>
-
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__projects-info-blocks"
-      >
-        {filteredProjects.map((project, index) => (
-          <div className="app__projects-block" key={index}>
-            {/* <ImageContainer>
+      <div className="app__projects-info-blocks-container">
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          animate={animateCard}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className="app__projects-info-blocks"
+        >
+          {filteredProjects.map((project, index) => (
+            <div className="app__projects-block" key={index}>
+              {/* <ImageContainer>
               <LinksContainer>
                 <div className="app__projects-icon-block">
                   {project.githubLink && (
@@ -94,33 +93,34 @@ const Projects = () => {
               <img src={urlFor(project.imgUrl)} alt={project.name} />
             </ImageContainer> */}
 
-            <div className="app__projects-block-content">
-              {/* <h4>{project.title}</h4> */}
-              <div class="app__projects-icon-block">
-                <a href={project.siteLink} target="_blank" rel="noreferrer">
-                  <BiLinkExternal />
-                </a>
-                <a
-                  className="app__projects-link"
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsGithub />
-                </a>
+              <div className="app__projects-block-content">
+                {/* <h4>{project.title}</h4> */}
+                <div class="app__projects-icon-block">
+                  <a href={project.siteLink} target="_blank" rel="noreferrer">
+                    <BiLinkExternal />
+                  </a>
+                  <a
+                    className="app__projects-link"
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsGithub />
+                  </a>
+                </div>
+                <p className="title-text">{project.title}</p>
+                <p className="description-text">{project.description}</p>
+                {project.techStack && (
+                  <p className="tech-text">
+                    Built with: <br />
+                    {project.techStack.join(", ")}
+                  </p>
+                )}
               </div>
-              <p className="title-text">{project.title}</p>
-              <p className="description-text">{project.description}</p>
-              {project.techStack && (
-                <p className="tech-text">
-                  Built with: <br />
-                  {project.techStack.join(", ")}
-                </p>
-              )}
             </div>
-          </div>
-        ))}
-      </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </>
   );
 };
