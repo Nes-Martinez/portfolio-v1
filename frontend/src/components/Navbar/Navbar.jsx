@@ -15,12 +15,14 @@ const Navbar = ({ toggle }) => {
         <MenuBars />
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "projects", "skills", "contact"].map((item) => (
-          <li className="app__navbar-listItem" key={`link-${item}`}>
-            <a href={`#${item}`}>{item}</a>
-            <div />
-          </li>
-        ))}
+        {["home", "bio", "about", "projects", "skills", "contact"].map(
+          (item) => (
+            <li className="app__navbar-listItem" key={`link-${item}`}>
+              <a href={`#${item}`}>{item}</a>
+              <div />
+            </li>
+          )
+        )}
         <li className="app__navbar-button">
           <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
             <button>resume</button>

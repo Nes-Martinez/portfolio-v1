@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className="section-header-text">About Me</h2>
+      <h2 className="section-header-text">What I Bring</h2>
       <div class="section-header-description">
         <p className="description-text">
           I am a full-stack web developer with a wide range of experience in

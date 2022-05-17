@@ -1,6 +1,7 @@
 import icon from "../assets/icon.png";
 import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
+import profile from "../assets/profile-01.png";
 import about01 from "../assets/about01.svg";
 import about02 from "../assets/about02.svg";
 import about03 from "../assets/about03.svg";
@@ -12,6 +13,7 @@ export default {
   icon,
   logo,
   logo2,
+  profile,
   about01,
   about02,
   about03,

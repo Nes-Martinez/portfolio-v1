@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 
-import { About, Footer, Header, Skills, Projects, Contact } from "./sections";
+import {
+  About,
+  Footer,
+  Header,
+  Skills,
+  Projects,
+  Contact,
+  Bio,
+} from "./sections";
 import { Navbar, MobileMenu, Backdrop } from "./components";
 import Head from "./components/Head";
 
@@ -20,6 +28,7 @@ const App = () => {
       <MobileMenu isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Header />
+      <Bio />
       <About />
       <Projects />
       <Skills />

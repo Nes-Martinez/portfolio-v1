@@ -17,11 +17,13 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <XIcon />
         </div>
         <ul className="app__navbar-mobile-links">
-          {["home", "about", "projects", "skills", "contact"].map((item) => (
-            <li key={item} onClick={toggle}>
-              <a href={`#${item}`}>{item}</a>
-            </li>
-          ))}
+          {["home", "bio", "about", "projects", "skills", "contact"].map(
+            (item) => (
+              <li key={item} onClick={toggle}>
+                <a href={`#${item}`}>{item}</a>
+              </li>
+            )
+          )}
           <li>
             <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
               <button>Resume</button>
@@ -41,7 +43,7 @@ const Container = styled.div`
   justify-content: center;
   width: 70%;
   height: 100vh;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   background: var(--white-color);
   position: fixed;
   top: 0;
