@@ -46,59 +46,63 @@ const Contact = () => {
     }
 
     createContact();
-    setTimeout(() => setFormSubmitted(false), 5000);
+    setTimeout(() => setFormSubmitted(false), 6000);
   };
 
   return (
     <>
-      <h2 className="section-header-text">Get in touch!</h2>
-
       {!formSubmitted ? (
-        <div className="app__contact-form">
-          <div className="app__flex">
-            <input
-              placeholder="Your Name"
-              name="name"
-              value={name}
-              onChange={handleChangeInput}
-            />
+        <>
+          <h2 className="section-header-text">Get in touch!</h2>
+          <div className="app__contact-form">
+            <div className="app__flex">
+              <input
+                placeholder="Your Name"
+                name="name"
+                value={name}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div className="app__flex">
+              <input
+                placeholder="Subject"
+                name="subject"
+                value={subject}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div className="app__flex">
+              <input
+                placeholder="Email"
+                name="email"
+                value={email}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div>
+              <textarea
+                className="text"
+                placeholder="Your Message"
+                name="message"
+                value={message}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <button
+              type="button"
+              className="app__contact-form-button"
+              onClick={handleSubmit}
+            >
+              {!loading ? "Send Message" : "Sending..."}
+            </button>
           </div>
-          <div className="app__flex">
-            <input
-              placeholder="Subject"
-              name="subject"
-              value={subject}
-              onChange={handleChangeInput}
-            />
-          </div>
-          <div className="app__flex">
-            <input
-              placeholder="Email"
-              name="email"
-              value={email}
-              onChange={handleChangeInput}
-            />
-          </div>
-          <div>
-            <textarea
-              className="text"
-              placeholder="Your Message"
-              name="message"
-              value={message}
-              onChange={handleChangeInput}
-            />
-          </div>
-          <button
-            type="button"
-            className="app__contact-form-button"
-            onClick={handleSubmit}
-          >
-            {!loading ? "Send Message" : "Sending..."}
-          </button>
-        </div>
+        </>
       ) : (
-        <div>
-          <h3 className="head-text">Thank you for getting in touch!</h3>
+        <div className="app__contact-success-message">
+          <h2 className="section-header-text">Thanks!</h2>
+          <h3 className="head-text">
+            I appreciate you writing to me. I'll be in touch!
+          </h3>
         </div>
       )}
     </>

@@ -21,8 +21,6 @@ const Skills = () => {
 
         let yearsData = await client.fetch(yearsQuery);
         setYears(yearsData);
-
-        console.log("Years", yearsData);
       } catch (error) {
         return error;
       }

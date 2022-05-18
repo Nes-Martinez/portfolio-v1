@@ -6,14 +6,16 @@ import React from "react";
 const NavigationSelector = ({ active }) => {
   return (
     <div className="app__navigation">
-      {["home", "about", "projects", "skills", "contact"].map((item, index) => (
-        <a
-          href={`#${item}`}
-          key={item + index}
-          className="app__navigation-active"
-          style={active === item ? { backgroundColor: "#366c90" } : {}}
-        />
-      ))}
+      {["home", "bio", "about", "projects", "skills", "contact"].map(
+        (item, index) => (
+          <a
+            href={`#${item}`}
+            key={item + index}
+            className="app__navigation-active"
+            style={active === item ? { backgroundColor: "#366c90" } : {}}
+          />
+        )
+      )}
     </div>
   );
 };

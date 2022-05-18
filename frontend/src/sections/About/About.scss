@@ -4,9 +4,6 @@
 }
 
 .app__about-info-blocks {
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-gap: 1rem;
   width: 85%;
   display: flex;
   flex-wrap: wrap;
@@ -19,13 +16,6 @@
     width: 100%;
     flex-direction: column;
   }
-
-  // @media screen and (max-width: 1200px) {
-  //   grid-template-columns: 1fr 1fr;
-  // }
-  // @media screen and (max-width: 868px) {
-  //   grid-template-columns: 1fr;
-  // }
 }
 
 .app__about-block {

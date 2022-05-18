@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <>
-      <div class="app__header-content">
+      <div className="app__header-content">
         <TransitionGroup component={null}>
           {isMounted &&
             collection.map((item, i) => (

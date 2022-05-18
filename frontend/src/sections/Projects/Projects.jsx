@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import styled from "styled-components";
 import { AppWrap, AnimationWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
+import { client } from "../../client";
 import "./Projects.scss";
 
-import { CgWebsite } from "react-icons/cg";
-import { BiSearchAlt2, BiLinkExternal } from "react-icons/bi";
+import { BiLinkExternal } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 
 const Projects = () => {
@@ -75,27 +73,8 @@ const Projects = () => {
         >
           {filteredProjects.map((project, index) => (
             <div className="app__projects-block" key={index}>
-              {/* <ImageContainer>
-              <LinksContainer>
-                <div className="app__projects-icon-block">
-                  {project.githubLink && (
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <BiSearchAlt2 />
-                    </a>
-                  )}
-                </div>
-              </LinksContainer>
-
-              <img src={urlFor(project.imgUrl)} alt={project.name} />
-            </ImageContainer> */}
-
               <div className="app__projects-block-content">
-                {/* <h4>{project.title}</h4> */}
-                <div class="app__projects-icon-block">
+                <div className="app__projects-icon-block">
                   <a href={project.siteLink} target="_blank" rel="noreferrer">
                     <BiLinkExternal />
                   </a>
@@ -126,30 +105,3 @@ const Projects = () => {
 };
 
 export default AppWrap(AnimationWrap(Projects, "app__projects"), "projects");
-
-const LinksContainer = styled.div`
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease;
-`;
-
-const ImageContainer = styled.div`
-  font-size: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  position: relative;
-
-  &:hover ${LinksContainer} {
-    opacity: 1;
-  }
-`;

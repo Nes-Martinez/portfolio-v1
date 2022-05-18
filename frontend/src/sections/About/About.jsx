@@ -24,7 +24,7 @@ const About = () => {
   return (
     <>
       <h2 className="section-header-text">What I Bring</h2>
-      <div class="section-header-description">
+      <div className="section-header-description">
         <p className="description-text">
           I am a full-stack web developer with a wide range of experience in
           different technologies.

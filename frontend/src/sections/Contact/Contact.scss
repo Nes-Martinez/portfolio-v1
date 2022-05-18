@@ -43,6 +43,7 @@
 
 .app__contact-form-button {
   color: white;
+  font-family: var(--font-base);
   background-color: var(--secondary-color);
   border: 1px solid var(--white-color);
   border-radius: 5px;
@@ -57,4 +58,8 @@
   &:hover {
     background-color: var(--tertiary-color);
   }
+}
+
+.app__contact-success-message {
+  color: white;
 }

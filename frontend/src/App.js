@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HelmetProvider } from "react-helmet-async";
 
 import {
   About,
@@ -23,17 +24,19 @@ const App = () => {
 
   return (
     <div className="app">
-      <Head />
-      <Backdrop isOpen={isOpen} toggle={toggle} />
-      <MobileMenu isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <Header />
-      <Bio />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      <HelmetProvider>
+        <Head />
+        <Backdrop isOpen={isOpen} toggle={toggle} />
+        <MobileMenu isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
+        <Header />
+        <Bio />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </HelmetProvider>
     </div>
   );
 };

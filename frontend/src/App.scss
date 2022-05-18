@@ -50,11 +50,34 @@
   padding-bottom: 0.5rem;
 }
 
+.sub-text {
+  font-size: clamp(0.7rem, 0.7vw, 1rem);
+  text-align: left;
+  letter-spacing: 1px;
+  color: #e4e4e4;
+  font-family: var(--secondary-font);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .description-text {
   font-size: clamp(1rem, 0.7vw, 1.5rem);
   text-align: left;
   letter-spacing: 1px;
   color: #e4e4e4;
+}
+
+.bio-text {
+  font-size: clamp(1rem, 0.7vw, 1.4rem);
+  line-height: 1.5rem;
+  text-align: left;
+  letter-spacing: 1.3px;
+  color: #e4e4e4;
+
+  @media screen and (max-width: 600px) {
+    text-align: center;
+    letter-spacing: 1.1px;
+  }
 }
 
 .tech-text {
@@ -217,10 +240,6 @@
     outline: 0;
     &:after {
       width: 100%;
-    }
-    & > * {
-      color: var(--tertiary-color) !important;
-      transition: all 0.3s ease-in-out;
     }
   }
   &:after {
