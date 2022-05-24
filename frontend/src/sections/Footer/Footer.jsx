@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimationWrap } from "../../wrapper";
 
 import "./Footer.scss";
 
