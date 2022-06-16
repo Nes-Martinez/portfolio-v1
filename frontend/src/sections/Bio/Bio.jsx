@@ -19,16 +19,17 @@ const Bio = () => {
             days of Myspace and AngelFire, tinkering with tables and background
             colors. But my trajectory to becoming a software engineer has been
             anything but linear. I've held a number of positions at the
-            intersections of arts, nonprofits, education and technology, which
-            has enabled me to foster a strong ability to translate and
+            intersections of arts, nonprofits, education and technology, all of
+            which have enabled me to foster a strong ability to translate and
             understand client needs to the tools/websites I build.
           </p>
           <p className="bio-text">
             I completed a teaching fellowship at Fullstack Academy after
-            completing its 13-week software engineering intensive, and most
-            recently have spent several months freelancing a variety of
-            projects. I continue to sharpen my skills, merging clean code with
-            beautiful designs. I invite you to learn more and connect with me{" "}
+            completing its 13-week fullstack Javascript software engineering
+            intensive. Most recently have spent several months freelancing a
+            variety of projects. I continue to sharpen my skills, merging clean
+            code with beautiful designs. I invite you to learn more about and
+            connect with me{" "}
             <a
               href="https://www.linkedin.com/in/nes-martinez/"
               target="_blank"

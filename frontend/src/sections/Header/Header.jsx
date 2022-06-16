@@ -13,11 +13,12 @@ const Header = () => {
   }, []);
 
   const one = <p className="app__header-medium-text">Hello!</p>;
-  const two = <p className="app__header-large-text">I'm Nes.</p>;
+  const two = <p className="app__header-large-text">My name is Nes.</p>;
   const three = (
     <p className="app__header-small-text">
       I'm a lifelong learner with a passion for building beautiful things on the
-      web, and writing beautiful code for those things. Let's work together.
+      web, and writing beautiful code for those things. Coding to me is like
+      21st century magic. Let's work together.
     </p>
   );
 
