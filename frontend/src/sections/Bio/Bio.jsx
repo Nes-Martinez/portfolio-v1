@@ -17,19 +17,18 @@ const Bio = () => {
           <p className="bio-text">
             My interest in building things for the web goes back to the early
             days of Myspace and AngelFire, tinkering with tables and background
-            colors. But my trajectory to becoming a software engineer has been
+            colors. But my trajectory to becoming a web developer has been
             anything but linear. I've held a number of positions at the
             intersections of arts, nonprofits, education and technology, all of
             which have enabled me to foster a strong ability to translate and
-            understand client needs to the tools/websites I build.
+            understand client needs to the designs and websites I create.
           </p>
           <p className="bio-text">
-            I completed a teaching fellowship at Fullstack Academy after
-            completing its 13-week fullstack Javascript software engineering
-            intensive. Most recently have spent several months freelancing a
-            variety of projects. I continue to sharpen my skills, merging clean
-            code with beautiful designs. I invite you to learn more about and
-            connect with me{" "}
+            After completing a 13-week fullstack Javascript software engineering
+            intensive at Fullstack Academy, I am most recently working as a web
+            developer at Japan Society in New York. I continue to sharpen my
+            skills, merging clean code with beautiful designs. I invite you to
+            learn more about and connect with me{" "}
             <a
               href="https://www.linkedin.com/in/nes-martinez/"
               target="_blank"
