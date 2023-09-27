@@ -26,8 +26,8 @@ const About = () => {
       <h2 className="section-header-text">What I Bring</h2>
       <div className="section-header-description">
         <p className="description-text">
-          I am a full-stack web developer with a wide range of experience in
-          different technologies, primarily focused on frontend engineering.
+          I am a front-end web developer with a wide range of experience in
+          different technologies, primarily focused on creative web experiences.
         </p>
       </div>
 
