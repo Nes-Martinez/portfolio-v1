@@ -11,7 +11,6 @@ const Bio = () => {
       <div className="app__bio-container">
         <div className="app__bio-left">
           <img src={images.profile} alt="profile" />
-          <p className="sub-text">&copy; Ricardo Torres.</p>
         </div>
         <div className="app__bio-right">
           <p className="bio-text">
@@ -24,11 +23,11 @@ const Bio = () => {
             understand client needs to the designs and websites I create.
           </p>
           <p className="bio-text">
-            After completing a 13-week fullstack Javascript software engineering
-            intensive at Fullstack Academy, I find myself most recently working
-            as a web developer at Japan Society in New York. I continue to
-            sharpen my skills, merging clean code with beautiful designs. I
-            invite you to learn more about and connect with me{" "}
+            After completing a 13-week web development intensive at Fullstack
+            Academy, I find myself most recently working as a web developer at
+            Japan Society in New York. I continue to sharpen my skills, merging
+            clean code with beautiful designs. I invite you to learn more about
+            and connect with me{" "}
             <a
               href="https://www.linkedin.com/in/nes-martinez/"
               target="_blank"

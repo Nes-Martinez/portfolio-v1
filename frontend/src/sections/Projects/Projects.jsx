@@ -50,19 +50,17 @@ const Projects = () => {
     <>
       <h2 className="section-header-text">Things I've Built</h2>
       <div className="app__projects-filters">
-        {["All", "React", "E-Commerce", "Database", "Other"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__projects-filter p-text ${
-                activeFilter === item ? "filter-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {["All", "Wordpress", "React", "Database"].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__projects-filter p-text ${
+              activeFilter === item ? "filter-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
       <div className="app__projects-info-blocks-container">
         <motion.div

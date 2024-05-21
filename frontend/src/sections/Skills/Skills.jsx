@@ -18,6 +18,7 @@ const Skills = () => {
       try {
         let skillsData = await client.fetch(skillsQuery);
         setSkills(skillsData);
+        console.log(skillsData);
 
         let yearsData = await client.fetch(yearsQuery);
         setYears(yearsData);
