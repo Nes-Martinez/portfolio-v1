@@ -30,10 +30,11 @@ const App = () => {
         <MobileMenu isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
         <Header />
-        <Bio />
-        <About />
-        <Projects />
         <Skills />
+        <Projects />
+        <Bio />
+        <Skills />
+        <About />
         <Contact />
         <Footer />
       </HelmetProvider>

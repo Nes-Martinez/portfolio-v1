@@ -10,16 +10,15 @@ const Head = () => {
         name="description"
         content="Nes Martinez is a web developer based in New Jersey, USA."
       />
-
       <meta property="og:title" content="Nes Martinez" />
       <meta
         property="og:description"
         content="Nes Martinez is a web developer based in New Jersey, USA."
       />
       <meta property="og:image" content={images.profile} />
+
       <meta property="og:url" content="nesmartinez.com" />
       <meta property="og:type" content="website" />
-
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Nes Martinez" />
       <meta

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { AppWrap, AnimationWrap } from "../../wrapper";
-import { client } from "../../client";
+import { urlFor, client } from "../../client";
 import "./Projects.scss";
 
 import { BiLinkExternal } from "react-icons/bi";
@@ -48,9 +48,9 @@ const Projects = () => {
 
   return (
     <>
-      <h2 className="section-header-text">Things I've Built</h2>
+      <h2 className="section-header-text">Work</h2>
       <div className="app__projects-filters">
-        {["All", "Wordpress", "React", "Database"].map((item, index) => (
+        {["All", "Wordpress", "React", "Shopify"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -85,6 +85,7 @@ const Projects = () => {
                     <BsGithub />
                   </a>
                 </div>
+                <img src={urlFor(project.imgUrl)} alt={project.title}></img>
                 <p className="title-text">{project.title}</p>
                 <p className="description-text">{project.description}</p>
                 {project.techStack && (

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap");
 
 :root {
-  --font-base: "Montserrat", sans-serif;
-  --secondary-font: "Roboto Slab", serif;
+  --font-base: "Calibri", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
 
   --primary-color: #0e1e2b;
   --secondary-color: #1c3d52;
