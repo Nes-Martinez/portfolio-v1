@@ -85,7 +85,9 @@ const Projects = () => {
                     <BsGithub />
                   </a>
                 </div>
-                <img src={urlFor(project.imgUrl)} alt={project.title}></img>
+                <a href={project.siteLink} target="_blank" rel="noreferrer">
+                  <img src={urlFor(project.imgUrl)} alt={project.title}></img>
+                </a>
                 <p className="title-text">{project.title}</p>
                 <p className="description-text">{project.description}</p>
                 {project.techStack && (
