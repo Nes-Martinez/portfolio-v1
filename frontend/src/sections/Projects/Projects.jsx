@@ -50,7 +50,7 @@ const Projects = () => {
     <>
       <h2 className="section-header-text">Work</h2>
       <div className="app__projects-filters">
-        {["All", "React", "React", "Squarespace", "Ecommerce"].map(
+        {["All", "React", "Wordpress", "Squarespace", "Ecommerce"].map(
           (item, index) => (
             <div
               key={index}
