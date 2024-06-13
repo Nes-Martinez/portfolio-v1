@@ -15,7 +15,7 @@ const Head = () => {
         property="og:description"
         content="Nes Martinez is a web developer based in New Jersey, USA."
       />
-      <meta property="og:image" content={images.profile} />
+      <meta property="og:image" src={images.profile} />
 
       <meta property="og:url" content="nesmartinez.com" />
       <meta property="og:type" content="website" />
@@ -25,7 +25,7 @@ const Head = () => {
         name="twitter:description"
         content="Nes Martinez is a web developer based in New Jersey, USA."
       />
-      <meta name="twitter:image" content={images.profile} />
+      <meta name="twitter:image" src={images.profile} />
     </Helmet>
   );
 };
