@@ -17,13 +17,11 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <XIcon />
         </div>
         <ul className="app__navbar-mobile-links">
-          {["home", "bio", "about", "projects", "skills", "contact"].map(
-            (item) => (
-              <li key={item} onClick={toggle}>
-                <a href={`#${item}`}>{item}</a>
-              </li>
-            )
-          )}
+          {["home", "skills", "work", "bio", "about", "contact"].map((item) => (
+            <li key={item} onClick={toggle}>
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          ))}
           <li>
             <a href="/NM-resume.pdf" target="_blank" rel="noopener noreferrer">
               <button>Resume</button>

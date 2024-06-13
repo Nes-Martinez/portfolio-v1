@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className="section-header-text">What I Bring</h2>
+      <h2 className="section-header-text">A Little Bit More</h2>
       <div className="section-header-description">
         <p className="description-text">
           I am a front-end web developer with a wide range of experience in

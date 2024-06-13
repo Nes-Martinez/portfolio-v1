@@ -50,17 +50,19 @@ const Projects = () => {
     <>
       <h2 className="section-header-text">Work</h2>
       <div className="app__projects-filters">
-        {["All", "Wordpress", "React", "Shopify"].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__projects-filter p-text ${
-              activeFilter === item ? "filter-active" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
+        {["All", "React", "React", "Squarespace", "Ecommerce"].map(
+          (item, index) => (
+            <div
+              key={index}
+              onClick={() => handleWorkFilter(item)}
+              className={`app__projects-filter p-text ${
+                activeFilter === item ? "filter-active" : ""
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
       <div className="app__projects-info-blocks-container">
         <motion.div
@@ -76,14 +78,14 @@ const Projects = () => {
                   <a href={project.siteLink} target="_blank" rel="noreferrer">
                     <BiLinkExternal />
                   </a>
-                  <a
+                  {/* <a
                     className="app__projects-link"
                     href={project.githubLink}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <BsGithub />
-                  </a>
+                  </a> */}
                 </div>
                 <a href={project.siteLink} target="_blank" rel="noreferrer">
                   <img src={urlFor(project.imgUrl)} alt={project.title}></img>

@@ -41,7 +41,7 @@
 }
 
 .title-text {
-  font-size: clamp(1.3rem, 0.7vw, 2rem);
+  font-size: clamp(1.5rem, 0.7vw, 2rem);
   text-align: left;
   letter-spacing: 1px;
   color: #e4e4e4;
@@ -61,10 +61,11 @@
 }
 
 .description-text {
-  font-size: clamp(1rem, 0.7vw, 1.5rem);
+  font-size: clamp(1.2rem, 0.7vw, 1.5rem);
   text-align: left;
   letter-spacing: 1px;
   color: #e4e4e4;
+  font-weight: 300;
 }
 
 .bio-text {
@@ -172,15 +173,15 @@
       }
     }
 
-    @media screen and (min-width: 2000px) {
+    @media screen and (min-width: 260px) {
       width: 70px;
       height: 70px;
 
       margin: 0.5rem 0;
 
       svg {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
       }
     }
   }

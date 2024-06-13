@@ -16,10 +16,10 @@ const Header = () => {
   const two = <p className="app__header-large-text">My name is Nestor.</p>;
   const three = (
     <p className="app__header-small-text">
-      I'm a lifelong learner with a passion for building beautiful things on the
-      web, whether through the magic of coding or through the many tools out
-      there. Building things on the web makes me feel like a wizard. Let's work
-      together.
+      I'm a lifelong learner with a passion for building fun things on the web,
+      whether through the magic of coding or through the many tools out there.
+      Building things on the web makes me feel like a wizard. Let's work
+      together!
     </p>
   );
 

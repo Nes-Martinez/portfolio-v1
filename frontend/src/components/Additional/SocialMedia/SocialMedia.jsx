@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 const SocialMedia = () => {
   return (
@@ -14,6 +20,15 @@ const SocialMedia = () => {
         </div>
       </a>
       <a
+        href="https://github.com/Nes-Martinez"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div>
+          <FaGithub />
+        </div>
+      </a>
+      <a
         href="https://www.facebook.com/nestor.a.s.martinez/"
         target="_blank"
         rel="noreferrer"
@@ -22,16 +37,6 @@ const SocialMedia = () => {
           <FaFacebook />
         </div>
       </a>
-      <a
-        href="https://www.instagram.com/nestor_the_robot/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div>
-          <FaInstagram />
-        </div>
-      </a>
-
       <a
         href="https://twitter.com/Nes_Martinez"
         target="_blank"
